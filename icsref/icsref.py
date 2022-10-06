@@ -3,8 +3,6 @@
 __author__ = 'Tasos Keliris'
 __docformat__ = 'reStructuredText'
 
-import sys
-sys.dont_write_bytecode=True
 
 from shutil import copyfile
 from cmd2 import Cmd
@@ -19,8 +17,6 @@ class icsrefPrompt(Cmd):
     """
     cmd2 prompt class for the interactive console
     """
-    def __init__(self):
-        Cmd.__init__(self, use_ipython=True)
 
     def do_load(self, filename):
         """
@@ -109,10 +105,13 @@ def console():
     banner_f = os.path.join(thisdir, 'data', 'banner')
     __file__
     with open(banner_f, 'r') as f:
-        lines = f.readlines()
-    banner = ''
-    for line in lines:
-        banner += line
+        banner = f.read()
+    #banner = ''
+    #for line in lines:
+        #banner += line
+
+    #print("Lines\n", lines)
+    #print("Banner\n", banner)
 
     # Import modules
     # Assumes the modules follow these conventions:
