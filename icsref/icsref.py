@@ -106,12 +106,6 @@ def console():
     __file__
     with open(banner_f, 'r') as f:
         banner = f.read()
-    #banner = ''
-    #for line in lines:
-        #banner += line
-
-    #print("Lines\n", lines)
-    #print("Banner\n", banner)
 
     # Import modules
     # Assumes the modules follow these conventions:
